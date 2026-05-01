@@ -334,7 +334,7 @@ with tab_cluster:
                 plt.tight_layout()
                 st.pyplot(fig_s)
                 plt.close()
-                insight("Clientes arriba a la derecha = alta frecuencia y alto gasto = tus mejores clientes (VIP).")
+               # insight("Clientes arriba a la derecha = alta frecuencia y alto gasto = tus mejores clientes (VIP).")
 
             # ── Resumen por clúster ──
             st.subheader("📋 Perfiles de Segmentos")
@@ -438,7 +438,7 @@ with tab_sentiment:
                 st.pyplot(fig_cm)
                 plt.close()
 
-                insight(f"La diagonal principal muestra predicciones correctas. Una exactitud de **{acc*100:.1f}%** significa que el modelo clasificó correctamente esa proporción de reseñas.")
+               # insight(f"La diagonal principal muestra predicciones correctas. Una exactitud de **{acc*100:.1f}%** significa que el modelo clasificó correctamente esa proporción de reseñas.")
 
             with col_g2:
                 st.subheader("📈 Reporte de Clasificación")
