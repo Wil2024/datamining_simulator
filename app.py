@@ -364,7 +364,7 @@ with tab_cluster:
              #   "🏆 Cliente VIP": "**Programa de fidelización exclusivo.** Ofrece descuentos anticipados, envío gratis y acceso a productos nuevos antes del lanzamiento.",
              #   "🌱 Cliente Potencial": "**Campañas de activación.** Envía cupones de segunda compra, muestras gratis o bundle de productos complementarios.",
               #  "💤 Cliente Ocasional": "**Re-engagement.** Email de recuperación con oferta flash (48h), recordatorio de carrito y encuestas de satisfacción.",
-           # }
+            }
             for perfil, estrategia in estrategias.items():
                 if "Perfil Automático" in summary.columns and perfil in summary["Perfil Automático"].values:
                     st.markdown(f"**{perfil}:** {estrategia}")
