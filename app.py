@@ -537,7 +537,7 @@ with tab_apriori:
                 basket = (
                     df_t.groupby(["order_id", "product_name"])["quantity"]
                     .sum().unstack().fillna(0)
-                    .applymap(lambda x: 1 if x > 0 else 0)
+                    .gt(0).astype(int)
                 )
 
                 frequent_items = apriori(basket, min_support=min_support, use_colnames=True)
