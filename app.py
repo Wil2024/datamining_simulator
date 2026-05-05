@@ -334,7 +334,7 @@ with tab_cluster:
                 plt.tight_layout()
                 st.pyplot(fig_s)
                 plt.close()
-               # insight("Clientes arriba a la derecha = alta frecuencia y alto gasto = tus mejores clientes (VIP).")
+                insight("Clientes arriba a la derecha = alta frecuencia y alto gasto = tus mejores clientes (VIP).")
 
             # ── Resumen por clúster ──
             st.subheader("📋 Perfiles de Segmentos")
@@ -359,15 +359,15 @@ with tab_cluster:
             st.dataframe(summary, use_container_width=True)
 
             # ── Recomendaciones por segmento ──
-            #st.subheader("💡 Estrategias por Segmento")
-            #estrategias = {
-             #   "🏆 Cliente VIP": "**Programa de fidelización exclusivo.** Ofrece descuentos anticipados, envío gratis y acceso a productos nuevos antes del lanzamiento.",
-             #   "🌱 Cliente Potencial": "**Campañas de activación.** Envía cupones de segunda compra, muestras gratis o bundle de productos complementarios.",
-              #  "💤 Cliente Ocasional": "**Re-engagement.** Email de recuperación con oferta flash (48h), recordatorio de carrito y encuestas de satisfacción.",
-            #}
-            #for perfil, estrategia in estrategias.items():
-             #   if "Perfil Automático" in summary.columns and perfil in summary["Perfil Automático"].values:
-             #       st.markdown(f"**{perfil}:** {estrategia}")
+            st.subheader("💡 Estrategias por Segmento")
+            estrategias = {
+                "🏆 Cliente VIP": "**Programa de fidelización exclusivo.** Ofrece descuentos anticipados, envío gratis y acceso a productos nuevos antes del lanzamiento.",
+                "🌱 Cliente Potencial": "**Campañas de activación.** Envía cupones de segunda compra, muestras gratis o bundle de productos complementarios.",
+                "💤 Cliente Ocasional": "**Re-engagement.** Email de recuperación con oferta flash (48h), recordatorio de carrito y encuestas de satisfacción.",
+            }
+            for perfil, estrategia in estrategias.items():
+                if "Perfil Automático" in summary.columns and perfil in summary["Perfil Automático"].values:
+                    st.markdown(f"**{perfil}:** {estrategia}")
 
             st.markdown("---")
             col_dl1, col_dl2 = st.columns(2)
@@ -438,7 +438,7 @@ with tab_sentiment:
                 st.pyplot(fig_cm)
                 plt.close()
 
-               # insight(f"La diagonal principal muestra predicciones correctas. Una exactitud de **{acc*100:.1f}%** significa que el modelo clasificó correctamente esa proporción de reseñas.")
+                insight(f"La diagonal principal muestra predicciones correctas. Una exactitud de **{acc*100:.1f}%** significa que el modelo clasificó correctamente esa proporción de reseñas.")
 
             with col_g2:
                 st.subheader("📈 Reporte de Clasificación")
