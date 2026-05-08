@@ -138,7 +138,7 @@ with st.sidebar:
     st.image("https://img.icons8.com/color/96/artificial-intelligence.png", width=80)
     st.markdown("## 📁 Carga de Datos")
 
-    empresa_nombre = st.text_input("Nombre de la empresa", placeholder="Ej: AJE Delivery, InkaSalud...")
+    empresa_nombre = st.text_input("Nombre de la empresa", placeholder="Ej: AJE Delivery, BotiCura, InkaSalud...")
 
     uploaded_trans = st.file_uploader("📦 Transacciones (.xlsx)", type=["xlsx"])
     uploaded_rev   = st.file_uploader("⭐ Reseñas (.xlsx)", type=["xlsx"])
@@ -173,6 +173,7 @@ if not uploaded_trans or not uploaded_rev:
     <b>Bienvenido al Simulador MBA de Minería de Datos.</b><br>
     Carga los archivos de <b>Transacciones</b> y <b>Reseñas</b> desde el panel izquierdo para comenzar.<br><br>
     Empresas disponibles con datasets listos:<br>
+    💊 <b>BotiCura</b> (Farmacia - Perú)<br>
     🛒 <b>AJE Delivery</b> (Bebidas/Abarrotes - Lima)<br>
     💊 <b>InkaSalud</b> (Farmacia - Lima)<br>
     💻 <b>TecnoExpress</b> (Electrónica - Arequipa)<br>
